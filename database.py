@@ -3,15 +3,10 @@ import pymssql
 
 def connection():
     # Server
-    #server = "nom035-dev-db-srv.database.windows.net"
-    #database = "nom035-db"
-    #username = "nom035admin"
-    #password = "ff7;z&tUGZiT9$)CzHoGjZUFN;RVfZeI"
-
-    server = "smartloans.database.windows.net"
-    database = "smartloan"
-    username = "adminsmart"
-    password = "Admin#8605"
+    server = "nom035-dev-db-srv.database.windows.net"
+    database = "nom035-db"
+    username = "nom035admin"
+    password = "ff7;z&tUGZiT9$)CzHoGjZUFN;RVfZeI"
 
     connection_string = {
         "server": server,
