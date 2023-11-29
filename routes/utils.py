@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
-from database import connection
+from databases import connection
 import json
 
 app = FastAPI()
