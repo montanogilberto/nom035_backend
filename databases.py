@@ -1,12 +1,18 @@
 import pymssql
+import os
 
 
 def connection():
     # Server
-    server = "nom035-dev-db-srv.database.windows.net"
-    database = "nom035-db"
-    username = "nom035admin"
-    password = "ff7;z&tUGZiT9$)CzHoGjZUFN;RVfZeI"
+    server = os.getenv("DB_SERVER")
+    database = os.getenv("DB_NAME")
+    username = os.getenv("DB_USER")
+    password = os.getenv("DB_PASSWORD")
+
+    print(f"server: {server}, database: {database}, username: {username}, password: {password}")
+
+    if None in (server, database, username, password):
+        raise ValueError("One or more required environment variables are missing.")
 
     connection_string = {
         "server": server,
